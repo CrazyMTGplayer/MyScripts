@@ -1,0 +1,10 @@
+set number "show number lines
+set cursorline "shows line where cursor is resting
+
+set tabstop =4 "tabs are shown as 4 spaces
+set softtabstop =4 "using tab while editing gives 4 spaces
+set expandtab "tab will be input as spaces rather than tabs
+
+set mouse =a "Set mouse cursor to move cursor
+
+set showmatch "highlights matching parentheticals
