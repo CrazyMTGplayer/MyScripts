@@ -11,8 +11,8 @@ def main():
 	tree1.insertRight('C')
 	printTree(tree1)
 	tree2 = BinaryTree('A')
-	tree2.insertRight('B')
 	tree2.insertRight('C')
+	tree2.insertRight('B')
 	printTree(tree2)
 
 	print isSameOrder(tree1, tree2)
@@ -79,7 +79,6 @@ def isSameOrder(tree1, tree2):
 		while b != None:
 			stack2.append(b)
 			b = b.getLeftChild()
-
 	return True
 
 
