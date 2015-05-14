@@ -1,3 +1,4 @@
+#https://blog.svpino.com/2015/05/07/five-programming-problems-every-software-engineer-should-be-able-to-solve-in-less-than-1-hour
 #fiborecursive.py
 #places first 100 fibo in a list, done iteratively
 #[1,1,2,3,5,8,13,21,etc]
