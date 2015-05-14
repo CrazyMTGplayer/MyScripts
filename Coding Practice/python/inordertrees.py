@@ -5,15 +5,17 @@
 import random
 
 def main():
+
 	tree1 = BinaryTree('B')
 	tree1.insertLeft('A')
 	tree1.insertRight('C')
 	printTree(tree1)
-
 	tree2 = BinaryTree('A')
 	tree2.insertRight('B')
 	tree2.insertRight('C')
 	printTree(tree2)
+
+	print isSameOrder(tree1, tree2)
 
 
 def process():
@@ -53,8 +55,33 @@ def printTree(tree):
 		print tree.getValue()
 		printTree(tree.getRightChild())
 
-def sameInOrder(tree1, tree2):
-		
+def isSameOrder(tree1, tree2):
+	stack1, stack2 = [], []
+	while tree1 != None:
+		stack1.append(tree1)
+		tree1 = tree1.getLeftChild()
+
+	while tree2 != None:
+		stack2.append(tree2)
+		tree2 = tree2.getLeftChild()
+
+	while stack1  != [] and stack2 != []:
+		a, b = stack1.pop(), stack2.pop()
+		if a.getValue() != b.getValue():
+			return False
+
+		a = a.getRightChild()
+		b = b.getRightChild()
+		while a != None:
+			stack1.append(a)
+			a = a.getLeftChild()
+
+		while b != None:
+			stack2.append(b)
+			b = b.getLeftChild()
+
+	return True
+
 
 if __name__ == "__main__":
 	main()
