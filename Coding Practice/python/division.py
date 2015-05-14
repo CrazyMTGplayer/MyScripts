@@ -3,6 +3,7 @@
 #5/3 with N = 5, 1.66666, N = 2, 1.66
 
 def main():
+	print "Function that prints N digits of rational number of two numbers"
 	inputstring = raw_input('Enter inputs here (num den digits): ')
 	print "Input is ",  inputstring
 	print "Output is ", process(inputstring)

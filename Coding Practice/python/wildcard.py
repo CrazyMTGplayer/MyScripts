@@ -3,6 +3,7 @@
 # 010, 011
 
 def main():
+	print "? is a wildcard this program prints combinations of 01?"
 	inputstring = raw_input('Enter inputs here: ')
 	print "Input is ",  inputstring
 	print "Output is "
