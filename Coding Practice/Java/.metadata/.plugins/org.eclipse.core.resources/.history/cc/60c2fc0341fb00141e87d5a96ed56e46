@@ -1,0 +1,20 @@
+package stringsnarrays;
+import java.util.Scanner;
+
+public class Driver {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input a string to check");
+        String user = input.next();
+        System.out.println("First method " + Uniquechars.uniquechar1(user));
+        System.out.println("Second method " + Uniquechars.uniquechar2(user));
+        input.close();
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package helloworld;
+
+public class otherworld {
+	
+	public void printer(){
+		System.out.println("otherworld");
+	}
+	
+	public boolean uniquechar(String str){
+		
+		for (int i = 0; i < str.length();i++){
+			char searchCh = str.charAt(i);
+			System.out.print(searchCh);
+			for (int j = i+1; j <str.length();j++){
+				System.out.print(str.charAt(j));
+				if (searchCh == str.charAt(j))
+					return false;
+			}
+		}
+		
+		return true;
+	}
+}

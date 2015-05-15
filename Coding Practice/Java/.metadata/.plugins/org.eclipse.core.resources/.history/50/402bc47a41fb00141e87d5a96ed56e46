@@ -1,0 +1,30 @@
+package stringsnarrays;
+import java.util.Scanner;
+
+public class Driver {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input a string to check");
+        String user = input.next();
+        
+        long millisecondsStart = System.currentTimeMillis();
+        System.out.println("First method " + Uniquechars.uniquechar1(user));
+        long timeSpentInMilliseconds = System.currentTimeMillis() - millisecondsStart;
+        
+        System.out.println(timeSpentInMilliseconds);
+        
+        millisecondsStart = System.currentTimeMillis();
+        System.out.println("First method " + Uniquechars.uniquechar2(user));
+        timeSpentInMilliseconds = System.currentTimeMillis() - millisecondsStart;
+        
+        System.out.println(timeSpentInMilliseconds);
+        input.close();
+
+	}
+
+}

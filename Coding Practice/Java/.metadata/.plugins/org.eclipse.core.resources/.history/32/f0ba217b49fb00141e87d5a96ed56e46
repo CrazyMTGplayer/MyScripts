@@ -1,0 +1,31 @@
+package stringsnarrays;
+
+import java.util.Scanner;
+
+public class Reversestring {
+
+	public Reversestring() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static String reverse(String str){
+		char[] reverse = str.toCharArray();//allows access of string elements
+		for(int i = 0; i < str.length(); i++){
+			char tmp = reverse[i];
+			reverse[i] = reverse[str.length()-1];
+			reverse[str.length()-1] = tmp;
+		}//for that reverses
+		
+		String output = new String(reverse);//converts back to string
+		
+		return output;
+	}//reverse()
+	
+	public static void testReverse(Scanner input){
+		
+		System.out.println("Input a string to check");
+    	String user = input.next();
+    	
+    	System.out.println(user + " reversed is " + Reversestring.reverse(user));
+	}//testReverse()
+}
