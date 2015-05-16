@@ -1,0 +1,9 @@
+package stringsnarrays;
+
+public class Anagrams {
+
+	public Anagrams() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

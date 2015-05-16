@@ -1,0 +1,34 @@
+//1.3
+package stringsnarrays;
+import java.util.Scanner;
+
+public class Removedups {
+
+	public Removedups() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static String removedups(String str){
+		
+		for(int i = 0; i < str.length(); i++){
+			for(int j = i+1; j < str.length(); j++){
+				if (str.charAt(i) == str.charAt(j))
+					str = str.substring(i,j) + str.substring(j+1);
+				
+			}//for that checks for dups over string
+		}//for that picks up each letter
+		
+		return str;
+	}//removedups()
+	
+	public static void testRemoveDups(Scanner input){
+		
+		System.out.println("Input a string to reverse");
+    	String user = input.nextLine();
+    	
+    	System.out.println(user + " with dups removed is " + Removedups.removedups(user));
+    	
+    	input.close();
+	}//testReverse()
+
+}

@@ -1,0 +1,40 @@
+package stringsnarrays;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Anagrams {
+
+	public Anagrams() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static boolean anagram(String str1, String str2){
+		str1 = str1.replaceAll("\\s", "");
+		str2 = str2.replaceAll("\\s", "");
+		
+		if (str1.length() != str2.length()) return false;
+		
+		str1 = str1.toLowerCase();
+		str2 = str2.toLowerCase();
+		char[] convert1 = str1.toCharArray();
+		char[] convert2 = str2.toCharArray();
+		
+		Arrays.sort(convert1);
+		Arrays.sort(convert2);
+		
+		str1 = new String(convert1);
+		str2 = new String(convert2);
+		
+		return str1 == str2;
+	}//reverse3()
+	
+	public static void testAnagram(Scanner input){
+		
+		System.out.println("Input 2 strings to anagram check");
+    	String user1 = input.nextLine();
+    	String user2 = input.nextLine();
+    	
+    	System.out.println(user1 + " and " + user2 + " are "+ Anagrams.anagram(user1, user2));
+	}//testReverse()
+
+}

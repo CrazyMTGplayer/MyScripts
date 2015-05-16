@@ -1,5 +1,5 @@
+//1.1
 package stringsnarrays;
-
 import java.util.Scanner;
 
 public class Uniquechars {
@@ -41,7 +41,7 @@ public class Uniquechars {
 	
 	public static void testUniques(Scanner input){
 
-        System.out.println("Input a string to check");
+        System.out.println("Testing uniques in a string\nInput a string to check");
         String user = input.next();
         
         System.out.println("First method returns " + Uniquechars.uniquechar1(user));
